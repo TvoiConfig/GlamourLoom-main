@@ -1,0 +1,392 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>GlamourLoom</title>
+	<meta charset="UTF-8">
+	<!-- Иконка -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- шрифты гугла -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+	<!-- Стили -->
+	<link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/flaticon.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/slicknav.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/jquery-ui.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/animate.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/style.css" %}"/>
+
+</head>
+<body>
+	<!-- Секция галереи-->
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="{% static "img/bg.jpg" %}">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 text-white">
+							<span>Наш бренд</span>
+							<h2>GlamourLoom</h2>
+							<p>Высокое качество, запоминающийся дизайн, доступная цена, ничем не хуже масс маркета </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hs-item set-bg" data-setbg="{% static "img/bg-2.jpg" %}">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 text-white">
+							<span>Регулярно поставляемые</span>
+							<h2>Зарубежные бренды</h2>
+							<p>Множество поставщиков параллельного импорта</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="slide-num-holder" id="snh-1"></div>
+		</div>
+	</section>
+	<!-- конец секции галереи -->
+
+
+
+	<!-- секция преимуществ-->
+	<section class="features-section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 p-0 feature">
+					<div class="feature-inner">
+						<div class="feature-icon">
+							<img src="{% static "img/icons/1.png" %}" alt="#">
+						</div>
+						<h2>Заказывай, а плати на пункте выдачи</h2>
+					</div>
+				</div>
+				<div class="col-md-4 p-0 feature">
+					<div class="feature-inner">
+						<div class="feature-icon">
+							<img src="{% static "img/icons/2.png" %}" alt="#">
+						</div>
+						<h2>Лучшее качество</h2>
+					</div>
+				</div>
+				<div class="col-md-4 p-0 feature">
+					<div class="feature-inner">
+						<div class="feature-icon">
+							<img src="{% static "img/icons/3.png" %}" alt="#">
+						</div>
+						<h2>Круглосуточная поддержка</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- конец секции преимуществ-->
+
+
+	<!-- секции каталога 1 -->
+	<section class="top-letest-product-section">
+		<div class="container">
+			<div class="section-title">
+				<h2>Хит товары</h2>
+			</div>
+			<div class="product-slider owl-carousel">
+				<div class="product-item">
+					<div class="pi-pic">
+						<img src="./img/product/1.jpg" alt="">
+						<div class="pi-links">
+							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+						</div>
+					</div>
+					<div class="pi-text">
+						<h6>$35,00</h6>
+						<p>Flamboyant Pink Top </p>
+					</div>
+				</div>
+				<div class="product-item">
+					<div class="pi-pic">
+						<div class="tag-new">New</div>
+						<img src="./img/product/2.jpg" alt="">
+						<div class="pi-links">
+							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+						</div>
+					</div>
+					<div class="pi-text">
+						<h6>$35,00</h6>
+						<p>Black and White Stripes Dress</p>
+					</div>
+				</div>
+				<div class="product-item">
+					<div class="pi-pic">
+						<img src="./img/product/3.jpg" alt="">
+						<div class="pi-links">
+							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+						</div>
+					</div>
+					<div class="pi-text">
+						<h6>$35,00</h6>
+						<p>Flamboyant Pink Top </p>
+					</div>
+				</div>
+				<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/4.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/6.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+	<!-- конец секции каталога 1 -->
+
+
+
+	<!-- секция каталога 2 -->
+	<section class="product-filter-section">
+		<div class="container">
+			<div class="section-title">
+				<h2>Все товары</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					{% for el in product %}
+						{% if el.type == "all" %}
+						<div class="product-item">
+							<a class="pi-pic"> <img src="{{ el.image.url }}" alt="image"></a>
+							<div class="pi-text">
+								<h6>{{ el.price }} ₽</h6>
+								<p>{{ el.name }}</p>
+							</div>
+							<a class="w-100 btn btn-lg btn-primary" href="{% url 'orders' %}">Купить</a>
+						</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/5.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<div class="tag-sale">ON SALE</div>
+							<img src="./img/product/6.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Black and White Stripes Dress</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/7.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/8.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/9.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/10.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Black and White Stripes Dress</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/11.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="./img/product/12.jpg" alt="">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>Flamboyant Pink Top </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- секция каталога 2 закрывается -->
+
+
+	<!-- Реклама -->
+	<section class="banner-section">
+		<div class="container">
+			<div class="banner set-bg" data-setbg="{% static "img/banner-bg.jpg" %}">
+				<div class="tag-new">Реклама</div>
+				<span>Тут могла бы быть</span>
+				<h2>ВАША РЕКЛАМА</h2>
+			</div>
+		</div>
+	</section>
+	<!-- Реклама -->
+
+
+	<!-- Подвал -->
+	<section class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>О нас</h2>
+						<p>С момента нашего основания, мы поставили перед собой задачу развивать бренд, который объединяет в себе инновацию и традиции.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget contact-widget">
+						<h2>Контакты</h2>
+						<div class="con-info">
+							<span>1.</span>
+							<p>GlamourLoom</p>
+						</div>
+						<div class="con-info">
+							<span>2.</span>
+							<p>ул. Куйбышева, 50/150, Батайск</p>
+						</div>
+						<div class="con-info">
+							<span>3.</span>
+							<p>+7 900 900 90 90</p>
+						</div>
+						<div class="con-info">
+							<span>4.</span>
+							<p>GlamourLoom@yandex.ru</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="social-links-warp">
+			<div class="container">
+				<p class="text-white text-center mt-5">&copy;<script>document.write(new Date().getFullYear());</script> Все права защищены GlamourLoom</a></p>
+			</div>
+		</div>
+	</section>
+	<!-- Подвал -->
+
+
+
+	<!--Скрипты-->
+	<script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+	<script src="{% static "js/jquery.slicknav.min.js" %}"></script>
+	<script src="{% static "js/owl.carousel.min.js" %}"></script>
+	<script src="{% static "js/jquery.nicescroll.min.js" %}"></script>
+	<script src="{% static "js/jquery.zoom.min.js" %}"></script>
+	<script src="{% static "js/jquery-ui.min.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+
+	</body>
+</html>
