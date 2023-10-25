@@ -21,3 +21,13 @@ class Products(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Order(models.Model):
+    Product = models.ForeignKey(Products, on_delete=models.CASCADE, null=True, blank=True, verbose_name= 'Выберите продукт')
+    date = models.DateTimeField(verbose_name='дата')
+
+
+    class Meta:
+        
+        verbose_name = 'Заказы'
+        verbose_name_plural = 'Список заказов'

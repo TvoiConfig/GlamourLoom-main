@@ -1,5 +1,8 @@
 {% load static %}
 
+{% load crispy_forms_tags %}
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -90,63 +93,77 @@
 		</div>
 	</section>
 	<!-- конец секции преимуществ-->
+	<section>
+		<div class="container d-flex justify-content-center align-items-center mx-auto py-4">
 
-
-	<!-- секции каталога 1 -->
-	<section class="top-letest-product-section">
-		<div class="container">
-			<div class="section-title">
-				<h2>Хит товары</h2>
-			</div>
-			<div class="product-slider owl-carousel">
-				{% for el in product %}
-					{% if el.type == "hit" %}
-					<div class="product-item p-3 m-2">
-						<div class="pi-pic">
-							<img src="{{ el.image.url }}" alt="{{ el.name }}" class="img-fluid">
-						</div>
-						<div class="pi-text">
-							<h6>{{ el.price }} ₽</h6>
-							<p>{{ el.name }}</p>
-						</div>
-						<a class="w-100 btn btn-lg btn-primary" href="{% url "orders" %}">Купить</a>
-					</div>
-					{% endif %}
-				{% endfor %}
-			</div>
+			<form method="post">
+				<h1>Заказ</h1>
+				{% csrf_token %}
+	
+	
+				{{ form|crispy }}
+	{#            {% for f in form %}#}
+	{#                <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}</p>#}
+	{#                <div class="form-error">{{ f.errors }}</div>#}
+	{#            {% endfor %}#}
+				<br>
+				<button class="w-100 btn btn-lg btn-primary" type="submit" onclick="clicks();" >Заказать</button>
+			</form>
 		</div>
+		<script>
+			IMask(document.getElementById('id_date'), {
+			  mask: Date,
+			  pattern: 'DD.MM.YYYY HH:mm',
+			  lazy: false,
+		
+			  format: function (date) {
+				return moment(date).format('DD.MM.YYYY HH:mm');
+			  },
+			  parse: function (str) {
+				return moment(str, 'DD.MM.YYYY HH:mm');
+			  },
+		
+			  blocks: {
+				YYYY: {
+				  mask: IMask.MaskedRange,
+				  from: 2020,
+				  to: 2050
+				},
+				MM: {
+				  mask: IMask.MaskedRange,
+				  from: 1,
+				  to: 12
+				},
+				DD: {
+				  mask: IMask.MaskedRange,
+				  from: 1,
+				  to: 31
+				},
+				HH: {
+				  mask: IMask.MaskedRange,
+				  from: 0,
+				  to: 23
+				},
+				mm: {
+				  mask: IMask.MaskedRange,
+				  from: 0,
+				  to: 59
+				}
+			  }
+			})
+		</script>
+		<script>
+			$('#id_date').datetimepicker({
+				container:'body',
+				language:'ru',
+				minuteStep:5,
+				format:'dd.mm.yyyy hh:ii',
+				weekStart:1,
+				startDate: new Date()
+			})
+		
+		</script>
 	</section>
-	<!-- конец секции каталога 1 -->
-
-
-
-	<!-- секция каталога 2 -->
-	<section class="product-filter-section">
-		<div class="container">
-			<div class="section-title">
-				<h2>Все товары</h2>
-			</div>
-			<div class="row">
-				{% for el in product %}
-					{% if el.type == "all" %}
-					<div class="col-lg-3 col-sm-6">
-						<div class="product-item">
-							<a class="pi-pic"><img src="{{ el.image.url }}" alt="image"></a>
-							<div class="pi-text">
-								<h6>{{ el.price }} ₽</h6>
-								<p>{{ el.name }}</p>
-							</div>
-							<a class="w-100 btn btn-lg btn-primary" href="{% url "orders" %}">Купить</a>
-						</div>
-					</div>
-					{% endif %}
-				{% endfor %}
-			</div>
-		</div>
-	</section>
-	<!-- секция каталога 2 закрывается -->
-
-
 	<!-- Реклама -->
 	<section class="banner-section">
 		<div class="container">
